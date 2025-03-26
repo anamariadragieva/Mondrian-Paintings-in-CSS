@@ -5,74 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Composition: No. II, With Yellow, Red and Blue, 1927</title>
-    <style>
-
-        .flex-container {
-            display: flex;
-            align-items: flex-start;
-            justify-content: center;
-            gap: 50px;
-            flex-basis: 0;
-            margin: 50px;
-        }
-
-        .grid-container {
-            flex-shrink: 0;
-
-            display: grid;
-            width: 561px;
-            height: 748px;
-            background-color: black;
-            grid-template-rows: 1.5fr 3fr 1fr 0.1fr;
-            grid-template-columns: 3fr 2fr;
-            gap: 9px
-
-        }
-
-        .white {
-            background-color: #F0F1EC;
-        }
-
-        .yellow {
-        background-color: #F9D01E;
-        }
-
-        .red {
-            background-color: #E72F24;
-        }
-
-        .blue {
-        background-color: #004592;
-        }
-
-        .three {
-            grid-row: span 2;
-        }
-
-        .five {
-            grid-row: span 2;
-            margin-top: 5px;
-        }
-
-        .text {
-            width: 561px;
-            font-size: 1rem;
-            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 
-            'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-        }
-
-        @media (max-width: 1000px) {
-
-            .flex-container {
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                gap: 0px;
-                margin: 40px;
-            }
-        }
-    
-    </style>
+    <link rel="stylesheet" href="./composition-ii-yellow-red-blue-1927.css"></link>
 </head>
 
 <body>
