@@ -4,15 +4,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mondrian Project</title>
+  <title>Composition with Red, Blue and Yellow, 1930</title>
   <style>
 
     .flex-container {
       display: flex;
-      flex-direction: column;
+      align-items: flex-start;
       justify-content: center;
-      height: 100vh;
-      align-items: center;
+      gap: 50px;
+      flex-basis: 0;
+      margin: 50px;
+      
     }
     .grid-container {
       background-color: #000;
@@ -25,7 +27,6 @@
     }
 
     .red {
-
       background-color: #E72F24;
     }
 
@@ -63,11 +64,23 @@
       background-color: #F0F1EC;
     }
 
-    .title {
-      font-size: 2rem;
+    .text {
+      font-size: 1rem;
       font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 
       'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     }
+
+    @media (max-width: 1000px) {
+
+      .flex-container {
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          gap: 0px;
+          margin: 40px;
+      }
+    }
+
   </style>
 </head>
 
@@ -86,6 +99,7 @@
     </div>
     <div class="text">
       <h1 class="title">Composition with Red, Blue and Yellow, 1930</h1>
+      <h2 class="artist">Pier Mondrian</h2>
     </div>
   </div>
 </body>
