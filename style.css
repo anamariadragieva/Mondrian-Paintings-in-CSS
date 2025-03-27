@@ -1,0 +1,322 @@
+/* ================ MONDRIAN 1 ================ */
+/* Composition with Red, Blue and Yellow, 1930 */
+
+.flex-container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 50px;
+  flex-basis: 0;
+  margin: 45px;
+}
+
+.mondrian-1 .grid-container {
+  background-color: #000;
+  width: 748px;
+  height: 748px;
+  display: grid;
+  grid-template-rows: 414px 130px 155px 22px;
+  grid-template-columns: 320px 198px 153px 50px;
+  gap: 9px;
+}
+
+.red {
+  background-color: #E72F24;
+}
+
+.mondrian-1 .blue {
+  background-color: #004592;
+  margin-bottom: 10px
+}
+
+.yellow {
+  background-color: #F9D01E;
+}
+
+.black {
+  background-color: #232625;
+}
+
+.mondrian-1 .two {
+  grid-column: span 3;
+}
+
+.mondrian-1 .three {
+  grid-row: span 2;
+}
+
+.mondrian-1 .four {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+.mondrian-1 .six {
+  grid-row: span 2;
+}
+
+.white {
+  background-color: #F0F1EC;
+}
+
+.text {
+  font-size: 1rem;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 
+  'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.mondrian-1 .text {
+  width: 748px;
+}
+
+@media (max-width: 1000px) {
+
+  .flex-container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 0px;
+    margin: 45px;
+  }
+}
+
+
+/* ==================== MONDRIAN 2 ==================== */
+/* Composition: No. II, With Yellow, Red and Blue, 1927 */
+
+.mondrian-2 .grid-container {
+  flex-shrink: 0;
+
+  display: grid;
+  width: 561px;
+  height: 748px;
+  background-color: black;
+  grid-template-rows: 1.5fr 3fr 1fr 0.1fr;
+  grid-template-columns: 3fr 2fr;
+  gap: 9px
+}
+
+.mondrian-2 .three {
+  grid-row: span 2;
+}
+
+.mondrian-2 .five {
+  grid-row: span 2;
+  margin-top: 5px;
+}
+
+.blue {
+  background-color: #004592;
+}
+
+.mondrian-2 .text {
+  width: 561px;
+}
+
+
+/* ===================== MONDRIAN 3 ===================== */
+/* Composition C (No.III) with Red, Yellow and Blue, 1935 */
+
+.mondrian-3 .grid-container {
+  background-color: #000;
+  width: 640px;
+  height: 642px;
+  display: grid;
+  grid-template-rows: 265px 155px 175px 20px;
+  grid-template-columns: 70px 211px 186px 146px;
+  gap: 9px;
+}
+
+.mondrian-3 .red {
+  grid-area: 1 / 1 / 2 / 3;
+}
+
+.mondrian-3 .two {
+  grid-column: span 2;
+}
+
+.mondrian-3 .three {
+  grid-column: span 2;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.mondrian-3 .four {
+  grid-column: span 2;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.mondrian-3 .yellow {
+  grid-row: span 2;
+}
+
+.mondrian-3 .six {
+  grid-row: span 2;
+}
+
+.mondrian-3 .eight {
+  grid-row: span 2;
+}
+
+.mondrian-3 .text {
+  width: 640px;
+}
+
+
+/* ================ MONDRIAN 4 ================ */
+/* Composition with Red, Blue and Yellow, 1930 */
+
+.mondrian-4 .grid-container {
+  background-color: #000;
+  width: 750px;
+  height: 500px;
+  display: grid;
+  grid-template-rows: 313px 96px 57px;
+  grid-template-columns: 183px 488px 45px;
+  gap: 17px;
+}
+
+.mondrian-4 .one {
+  margin-top: 27px;
+}
+
+.mondrian-4 .red {
+  grid-column: span 2;
+}
+
+.mondrian-4 .blue {
+  grid-row: span 2;
+}
+
+.mondrian-4 .four {
+  grid-row: span 2;
+}
+
+.mondrian-4 .five {
+  margin-bottom: 8px;
+}
+
+.mondrian-1 .text {
+  width: 750px;
+}
+
+/* ============ MONDRIAN 5 ============ */
+/* Tableau I, 1921 */
+
+.mondrian-5 .grid-container {
+  background-color: #000;
+  width: 635px;
+  height: 715px;
+  display: grid;
+  grid-template-rows: 12px 34px 234px 78px 176px 99px 22px;
+  grid-template-columns: 55px 215px 183px 47px 95px;
+  gap: 10px;
+}
+
+.mondrian-5 .red {
+  grid-column: span 2;
+}
+
+.offwhite {
+  background-color: #e4e7eb;
+}
+
+.mondrian-5 .two {
+  grid-area: 1 / 3 / 5 / -2;
+}
+
+.mondrian-5 .black.three {
+  grid-row: span 2;
+}
+
+.mondrian-5 .four {
+  grid-area: 2 / 1 / 5 / 3;
+}
+
+.mondrian-5 .seven {
+  grid-row: span 3;
+}
+
+.mondrian-5 .nine {
+  grid-area: 5 / 3 / -2 / -2;
+}
+
+.mondrian-5 .yellow {
+  grid-row: span 3;
+}
+
+.mondrian-5 .twelve {
+  grid-column: span 2;
+}
+
+.mondrian-5 .text {
+  width: 630px;
+}
+
+
+/* ====================== MONDRIAN 6 ====================== */
+/* Composition with Yellow, Red, Black, Blue and Gray, 1920 */
+
+.mondrian-6 .grid-container {
+  background-color: #000;
+  width: 705px;
+  height: 605px;
+  display: grid;
+  grid-template-rows: 28px 75px 85px 170px 64px 64px 80px;
+  grid-template-columns: 88px 126px 254px 106px 106px;
+  gap: 11px;
+  justify-content: center;
+  align-content: center;
+}
+
+.mondrian-6 .one.offwhite {
+  grid-row: span 2;
+}
+
+.mondrian-6 .two {
+  grid-row: span 2;
+}
+
+.mondrian-6 .three.yellow {
+  grid-row: span 2;
+}
+
+.mondrian-6 .four {
+  grid-column: span 2;
+}
+
+.mondrian-6 .five.black {
+  grid-row: span 2;
+}
+
+.mondrian-6 .six.offwhite {
+  grid-row: span 3;
+}
+
+.mondrian-6 .seven.red {
+  grid-row: span 4;
+}
+
+.mondrian-6 .eight.black {
+  grid-row: span 2;
+}
+
+.mondrian-6 .nine {
+  grid-row: span 2;
+}
+
+.mondrian-6 .eleven {
+  grid-row: span 2;
+}
+
+.mondrian-6 .twelve.blue {
+  grid-row: span 2;
+}
+
+.mondrian-6 .fourteen {
+  grid-row: span 2;
+}
+
+.mondrian-6 .eighteen {
+  grid-column: span 3;
+}
