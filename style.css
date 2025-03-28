@@ -1,5 +1,124 @@
+/* =========== HOME =========== */
+/*        Mondrian CSS        */
+
+.home-container {
+  display: grid;
+  grid-template-columns: minmax(100px, 400px) minmax(100px, 400px);
+  grid-template-rows: 1fr 2fr 1fr;
+  gap: 50px;
+  height: 90vh;
+  margin: 20px;
+  justify-content: center;
+  text-align: center;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 
+  'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+
+.headline {
+  grid-column: span 2;
+}
+
+.home-title {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.home-description {
+  font-size: 1rem;
+  color: #444;
+}
+
+.subtext {
+  display: grid;
+  grid-template-columns: 1fr 2fr 3fr;
+  grid-template-rows: 2fr 5fr;
+  gap: 1px;
+}
+
+.subtext-title {
+  min-width: max-content;
+  text-transform: capitalize;
+  text-align: end;
+  grid-column: span 2;
+  align-content: end;
+  margin-bottom: 0px;
+}
+
+.description {
+  min-width: min-content;
+  text-align: justify;
+  grid-area: 2/2/-1/-1;
+  padding-right: 10px;
+}
+
+.painting-list {
+  grid-area: 2/2/-1/-1;
+  list-style: none;
+  padding: 0;
+  text-align: start;
+}
+
+.painting-list li {
+  margin: 15px 0;
+}
+
+.painting-list a {
+  text-decoration: none;
+  font-size: 1.2rem;
+  color: #000;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.painting-list a:hover {
+  color: #E72F24;
+  transform: scale(1.05);
+}
+
+.footer {
+  text-align: end;
+  font-size: 0.8rem;
+  color: #555;
+  padding-right: 45px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 
+  'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+
+.footer a {
+  color: #004592;
+  text-decoration: none;
+  font-weight: 500;
+  border-bottom: transparent;
+}
+
+.footer a:hover {
+  color: #E72F24;
+  border-bottom: transparent;
+}
+
+
+
+.grid-container div {
+  transition: transform 0.3s ease;
+}
+
+.grid-container div:hover {
+  transform: scale(1.05);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* ================ MONDRIAN 1 ================ */
-/* Composition with Red, Blue and Yellow, 1930 */
+/* Composition No. III; With Red, Blue, Yellow and Black, 1929 */
 
 .flex-container {
   display: flex;
