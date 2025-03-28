@@ -6,6 +6,18 @@
         <title>Mondrian CSS</title>
         <link rel="stylesheet" href="style.css" />
     </head>
+
+    <script>
+        function zoomAndGo(event, el) {
+          event.preventDefault(); // Stop browser from navigating immediately
+          const thumbnail = el.querySelector('.mondrian-thumbnail1');
+          thumbnail.classList.add('zoomed');
+          setTimeout(() => {
+            window.location.href = el.href;
+          }, 600); // Match transition duration
+        }
+      </script>
+
     <body class="home">
         <div class="home-container">
             <div class="headline">
@@ -28,8 +40,25 @@
                     </p>
                 </div>
             </div>
+
+            <a href="mondrian-1.html" class="thumbnail-link" onclick="zoomAndGo(event, this)">
+                <div class="grid-container mondrian-thumbnail1">
+                    <div class="one red"></div>
+                    <div class="two white"></div>
+                    <div class="three white"></div>
+                    <div class="four white"></div>
+                    <div class="five blue"></div>
+                    <div class="six white"></div>
+                    <div class="seven white"></div>
+                    <div class="eight yellow"></div>
+                    <div class="nine black"></div>
+                </div>
+              </a>
+
+
+
             <ul class="painting-list">
-                <li><a href="mondrian-1.html">Composition No. III (1929)</a></li>
+                <li><a href="mondrian-1.html">Composition No. III; With Red, Blue, Yellow and Black (1929)</a></li>
                 <li><a href="mondrian-2.html">Composition No. II (1927)</a></li>
                 <li><a href="mondrian-3.html">Composition C (1935)</a></li>
                 <li><a href="mondrian-4.html">Composition with Red, Blue and Yellow (1930)</a></li>

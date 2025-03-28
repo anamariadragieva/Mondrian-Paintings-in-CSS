@@ -96,21 +96,83 @@
 }
 
 
+/* -------------- thumbnail-1 -------------- */
 
-.grid-container div {
-  transition: transform 0.3s ease;
+.mondrian-thumbnail1 {
+  background-color: #000;
+  width: 206px;
+  height: 204px;
+  display: grid;
+  grid-template-rows: 112px 35px 42px 6px;
+  grid-template-columns: 87px 54px 42px 14px;
+  gap: 3px;
 }
 
-.grid-container div:hover {
-  transform: scale(1.05);
+.mondrian-thumbnail1:hover {
+  background-color: #FFFFFF00;
+  transition: ease 0.8s;
 }
 
+.mondrian-thumbnail1 {
+  transition: ease 0.8s;
+}
+
+.mondrian-thumbnail1 div:hover {
+  transform: scale(1.3);
+  rotate: -90deg;
+  translate: 70%;
+  transition: ease 0.8s;
+}
+
+.mondrian-thumbnail1 div {
+  transition: ease 0.8s;
+}
+
+.mondrian-thumbnail1.zoomed {
+  background-color: #FFFFFF00;
+  transform: scale(10);
+  translate: 130% ;
+  transition: transform 0.8s ease;
+}
+
+.mondrian-thumbnail1.zoomed div {
+  transition: none !important;
+}
+
+/* Disable rotation when thumbnail is zooming */
+.mondrian-thumbnail1.zoomed div:hover {
+  rotate: 0deg;
+  pointer-events: none;
+}
+
+/* Layout copied from mondrian-1 */
+.mondrian-thumbnail1 .two { grid-column: span 3; }
+.mondrian-thumbnail1 .three { grid-row: span 2; }
+.mondrian-thumbnail1 .four { grid-column: span 2; grid-row: span 2; }
+.mondrian-thumbnail1 .six { grid-row: span 2; }
+
+/* Tiles changing color on hover - remove & use elsewhere
+.mondrian-thumbnail1 .white:hover { background-color:  #E72F24; }
+.mondrian-thumbnail1 .four.white:hover { background-color: #004592; }
+.mondrian-thumbnail1 .red:hover { background-color: #F9D01E; }
+.mondrian-thumbnail1 .black:hover { background-color: #004592; }
+.mondrian-thumbnail1 .blue:hover { background-color: #e4e7eb; }
+.mondrian-thumbnail1 .yellow:hover { background-color: #232625; }
+ */
 
 
+/*transitions*/
 
+.grid-container.main div {
+  transition: ease 0.8s;
+}
 
-
-
+.grid-container.main div:hover {
+  transform: scale(0.50);
+  transition: ease 0.7s;
+  rotate: 90deg;
+  translate: -5%;
+}
 
 
 
