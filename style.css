@@ -459,3 +459,83 @@
   background-color: #F0F1EC;
   grid-area: 10/-3/12/-1;
 }
+
+
+/* ========================== MONDRIAN 7 ========================== */
+/* Composition No. XI; London, with Blue, Red and Yellow, 1940-1942 */
+
+.mondrian-7 .grid-container {
+  background-color: #000;
+  width: 610px;
+  height: 722px;
+  display: grid;
+  grid-template-rows: 10px 200px 78px 6px 8px 20px 20px 74px 68px 70px 38px;
+  grid-template-columns: 8px 22px 230px 127px 96px 62px;
+  gap: 13px;
+}
+
+.mondrian-7 .thicker-line {
+  border-top: black solid 5px;
+}
+
+.mondrian-7 .two {
+  grid-column: span 2;
+}
+
+.mondrian-7 .seven {
+  grid-column: span 2;
+}
+
+.mondrian-7 .eleven.white {
+  grid-area: 3/1/8/2;
+}
+.mondrian-7 .twelve {
+  grid-area: 3/2/8/4;
+}
+
+.mondrian-7 .thirteen {
+  grid-row: span 5;
+}
+
+.mondrian-7 .fourteen.blue {
+  grid-row: span 2;
+}
+
+.mondrian-7 .fifteen.blue {
+  grid-row: span 2;
+}
+
+.mondrian-7 .sixteen.red {
+  grid-area: 4/1/6/2;
+}
+
+.mondrian-7 .seventeen.blue {
+  grid-row: span 3;
+  border-top: black solid 2px;
+}
+
+.mondrian-7 .eighteen.blue {
+  grid-row: span 3;
+  border-top: black solid 2px;
+}
+
+.mondrian-7 .twentyfive.white {
+  border-bottom: black solid 4px;
+}
+
+.mondrian-7 .twentysix.white {
+  grid-area: 9/2/-1/4;
+}
+
+.mondrian-7 .twentyseven.yellow {
+  grid-row: span 2;
+}
+
+.mondrian-7 .thirty {
+  grid-row: span 2;
+  border-top: black solid 8px;
+}
+
+.mondrian-7 .text {
+  width: 610px;
+}
