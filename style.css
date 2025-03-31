@@ -99,22 +99,24 @@
 /* -------------- thumbnail-1 -------------- */
 
 .mondrian-thumbnail1 {
-  background-color: #000;
+  background-color: black;
   width: 206px;
   height: 204px;
   display: grid;
   grid-template-rows: 112px 35px 42px 6px;
   grid-template-columns: 87px 54px 42px 14px;
   gap: 3px;
+  transition: ease 0.8s, background-color 0.4s;
+  transform-origin: center;
+}
+
+.mondrian-thumbnail1 div {
+  transition: ease 0.8s;
 }
 
 .mondrian-thumbnail1:hover {
-  background-color: #FFFFFF00;
-  transition: ease 0.8s;
-}
-
-.mondrian-thumbnail1 {
-  transition: ease 0.8s;
+  background-color: transparent;
+  transform: scale(1.15);
 }
 
 .mondrian-thumbnail1 div:hover {
@@ -124,24 +126,38 @@
   transition: ease 0.8s;
 }
 
-.mondrian-thumbnail1 div {
-  transition: ease 0.8s;
+.mondrian-thumbnail1.zoomed {
+  transform: scale(10);
+  translate: 150% -150%;
+  animation: fadeToBlack 0.5s ease forwards 0.3s;
 }
 
-.mondrian-thumbnail1.zoomed {
-  background-color: #FFFFFF00;
-  transform: scale(10);
-  translate: 130% ;
-  transition: transform 0.8s ease;
+@keyframes fadeToBlack {
+  from {
+    background-color: transparent;
+  }
+  to {
+    background-color: black;
+  }
 }
 
 .mondrian-thumbnail1.zoomed div {
-  transition: none !important;
+  animation: rotateBlocks 0.4s ease 0.2s;
 }
 
-/* Disable rotation when thumbnail is zooming */
-.mondrian-thumbnail1.zoomed div:hover {
-  rotate: 0deg;
+@keyframes rotateBlocks {
+  0% {
+    rotate: 0deg;
+  }
+  100% {
+    rotate: 45deg;
+  }
+}
+
+.mondrian-thumbnail1.zoomed *:hover {
+  transform: none !important;
+  rotate: 0deg !important;
+  transition: none !important;
   pointer-events: none;
 }
 
@@ -161,7 +177,74 @@
  */
 
 
-/*transitions*/
+/* ================ ALL MONDRIAN PAGES ================ */
+/* ------------------- TRANSITIONS ------------------- */
+
+.grid-container.main {
+  transform-origin: center;
+  animation: backgroundFadeZoomOut 1s ease forwards;
+}
+
+@keyframes backgroundFadeZoomOut {
+  0% {
+    background-color: #000000;
+    transform: scale(10);
+    opacity: 0;
+  }
+
+  100% {
+    background-color: #000000;
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.grid-container.main div {
+  animation: rotateColors 1.8s ease forwards;
+}
+
+@keyframes rotateColors {
+  0% {
+    rotate: -45deg;
+  }
+
+  100% {
+    rotate: 0deg;
+  }
+}
+
+.grid-container.main .white {
+  animation: rotateWhites 1s ease forwards;
+}
+
+@keyframes rotateWhites {
+  0% {
+    rotate: -45deg;
+    motion-rotation: reverse;
+  }
+
+  100% {
+    rotate: 0deg;
+    motion-rotation: reverse;
+  }
+}
+
+.grid-container.main .five {
+  animation: rotateFives 2.5s ease forwards;
+}
+
+@keyframes rotateFives {
+  0% {
+    rotate: -45deg;
+  }
+
+  100% {
+    rotate: 0deg;
+  }
+}
+
+
+/* On Hover transitions on All Mondrian Pages */
 
 .grid-container.main div {
   transition: ease 0.8s;
@@ -170,13 +253,7 @@
 .grid-container.main div:hover {
   transform: scale(0.50);
   transition: ease 0.7s;
-  rotate: 90deg;
-  translate: -5%;
 }
-
-
-
-
 
 
 /* ================ MONDRIAN 1 ================ */
@@ -192,7 +269,7 @@
 }
 
 .mondrian-1 .grid-container {
-  background-color: #000;
+  background-color: #000000;
   width: 748px;
   height: 748px;
   display: grid;

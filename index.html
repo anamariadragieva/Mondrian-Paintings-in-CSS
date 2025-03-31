@@ -8,6 +8,14 @@
     </head>
 
     <script>
+        // Reset zoom on back/refresh
+        window.addEventListener('pageshow', () => {
+            document.querySelectorAll('.mondrian-thumbnail1.zoomed').forEach(el => {
+                el.classList.remove('zoomed');
+            });
+        });
+
+        // Zoom and navigate
         function zoomAndGo(event, el) {
           event.preventDefault(); // Stop browser from navigating immediately
           const thumbnail = el.querySelector('.mondrian-thumbnail1');
