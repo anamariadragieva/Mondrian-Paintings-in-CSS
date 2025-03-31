@@ -5,12 +5,13 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <title>Mondrian CSS</title>
         <link rel="stylesheet" href="style.css" />
+        <link rel="icon" type="image/png" href="favicon.png">
     </head>
 
     <script>
         // Reset zoom on back/refresh
         window.addEventListener('pageshow', () => {
-            document.querySelectorAll('.mondrian-thumbnail1.zoomed').forEach(el => {
+            document.querySelectorAll('.grid-container.zoomed').forEach(el => {
                 el.classList.remove('zoomed');
             });
         });
@@ -18,10 +19,10 @@
         // Zoom and navigate
         function zoomAndGo(event, el) {
           event.preventDefault(); // Stop browser from navigating immediately
-          const thumbnail = el.querySelector('.mondrian-thumbnail1');
-          thumbnail.classList.add('zoomed');
+          const grid = el.querySelector('.grid-container');
+          grid.classList.add('zoomed');
           setTimeout(() => {
-            window.location.href = el.href;
+            window.location.href = el.getAttribute('href');
           }, 600); // Match transition duration
         }
       </script>
@@ -61,13 +62,22 @@
                     <div class="eight yellow"></div>
                     <div class="nine black"></div>
                 </div>
-              </a>
-
-
-
+                <p class="mondrian-title1">Composition No. III; With Red, Blue, Yellow and Black (1929)</p>
+            </a>
+            
+            <a href="mondrian-2.html" class="thumbnail-link" onclick="zoomAndGo(event, this)">
+                <div class="grid-container mondrian-thumbnail2">
+                  <div class="one yellow"></div>
+                  <div class="two white"></div>
+                  <div class="three white"></div>
+                  <div class="four red"></div>
+                  <div class="five white"></div>
+                  <div class="six blue"></div>
+                </div>
+                <p class="mondrian-title2">Composition No. II (1927)</p>
+            </a>
+              
             <ul class="painting-list">
-                <li><a href="mondrian-1.html">Composition No. III; With Red, Blue, Yellow and Black (1929)</a></li>
-                <li><a href="mondrian-2.html">Composition No. II (1927)</a></li>
                 <li><a href="mondrian-3.html">Composition C (1935)</a></li>
                 <li><a href="mondrian-4.html">Composition with Red, Blue and Yellow (1930)</a></li>
                 <li><a href="mondrian-5.html">Tableau I (1921)</a></li>

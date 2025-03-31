@@ -52,7 +52,7 @@
 }
 
 .painting-list {
-  grid-area: 2/2/-1/-1;
+  display: block;
   list-style: none;
   padding: 0;
   text-align: start;
@@ -97,6 +97,24 @@
 
 
 /* -------------- thumbnail-1 -------------- */
+
+.thumbnail-link {
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  margin: 30px;
+  font-size: 0.9rem;
+  color: #000;
+  transition: transform 0.2s ease, color 0.2s ease;
+  width: 206px;
+  line-height: 1.3;
+}
+
+.thumbnail-link:hover {
+  color: #E72F24;
+  transform: scale(1.05);
+  font-size: 0.95rem;
+}
 
 .mondrian-thumbnail1 {
   background-color: black;
@@ -175,6 +193,87 @@
 .mondrian-thumbnail1 .blue:hover { background-color: #e4e7eb; }
 .mondrian-thumbnail1 .yellow:hover { background-color: #232625; }
  */
+
+
+ /* -------------- thumbnail-2 -------------- */
+
+ .mondrian-thumbnail2 {
+  background-color: black;
+  width: 168px;
+  height: 224px;
+  display: grid;
+  grid-template-rows: 1.5fr 3fr 1fr 0.1fr;
+  grid-template-columns: 3fr 2fr;
+  gap: 3px;
+  transition: ease 0.8s, background-color 0.4s;
+  transform-origin: center;
+}
+
+.mondrian-title2 {
+  margin-left: 0px;
+  width: 168px;
+}
+
+.mondrian-thumbnail2 div {
+  transition: ease 0.8s;
+}
+
+.mondrian-thumbnail2:hover {
+  background-color: transparent;
+  transform: scale(1.15);
+}
+
+.mondrian-thumbnail2 div:hover {
+  transform: scale(1.3);
+  rotate: -90deg;
+  translate: 70%;
+  transition: ease 0.8s;
+}
+
+.mondrian-thumbnail2.zoomed {
+  transform: scale(10);
+  translate: 150% -150%;
+  animation: fadeToBlack 0.5s ease forwards 0.3s;
+}
+
+@keyframes fadeToBlack {
+  from {
+    background-color: transparent;
+  }
+  to {
+    background-color: black;
+  }
+}
+
+.mondrian-thumbnail2.zoomed div {
+  animation: rotateBlocks 0.4s ease 0.2s;
+}
+
+@keyframes rotateBlocks {
+  0% {
+    rotate: 0deg;
+  }
+  100% {
+    rotate: 45deg;
+  }
+}
+
+.mondrian-thumbnail2.zoomed *:hover {
+  transform: none !important;
+  rotate: 0deg !important;
+  transition: none !important;
+  pointer-events: none;
+}
+
+/* Layout copied from mondrian-2 */
+.mondrian-thumbnail2 .three {
+  grid-row: span 2;
+}
+
+.mondrian-thumbnail2 .five {
+  grid-row: span 2;
+  margin-top: 1px;
+}
 
 
 /* ================ ALL MONDRIAN PAGES ================ */
@@ -256,7 +355,7 @@
 }
 
 
-/* ================ MONDRIAN 1 ================ */
+/* ======================== MONDRIAN 1 ======================== */
 /* Composition No. III; With Red, Blue, Yellow and Black, 1929 */
 
 .flex-container {
