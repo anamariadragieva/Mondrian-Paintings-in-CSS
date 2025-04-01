@@ -4,28 +4,9 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <title>Mondrian CSS</title>
-        <link rel="stylesheet" href="style.css" />
-        <link rel="icon" type="image/png" href="favicon.png">
+        <link rel="stylesheet" href="style.css"/>
+        <link rel="icon" type="image/png" href="favicon.png"/>
     </head>
-
-    <script>
-        // Reset zoom on back/refresh
-        window.addEventListener('pageshow', () => {
-            document.querySelectorAll('.grid-container.zoomed').forEach(el => {
-                el.classList.remove('zoomed');
-            });
-        });
-
-        // Zoom and navigate
-        function zoomAndGo(event, el) {
-          event.preventDefault(); // Stop browser from navigating immediately
-          const grid = el.querySelector('.grid-container');
-          grid.classList.add('zoomed');
-          setTimeout(() => {
-            window.location.href = el.getAttribute('href');
-          }, 600); // Match transition duration
-        }
-      </script>
 
     <body class="home">
         <div class="home-container">
@@ -50,7 +31,7 @@
                 </div>
             </div>
 
-            <a href="mondrian-1.html" class="thumbnail-link" onclick="zoomAndGo(event, this)">
+            <a href="mondrian-1.html" class="thumbnail-link mini1" onclick="zoomAndGo(event, this)">
                 <div class="grid-container mondrian-thumbnail1">
                     <div class="one red"></div>
                     <div class="two white"></div>
@@ -65,25 +46,149 @@
                 <p class="mondrian-title1">Composition No. III; With Red, Blue, Yellow and Black (1929)</p>
             </a>
             
-            <a href="mondrian-2.html" class="thumbnail-link" onclick="zoomAndGo(event, this)">
+            <a href="mondrian-2.html" class="thumbnail-link mini2" onclick="zoomAndGo(event, this)">
                 <div class="grid-container mondrian-thumbnail2">
-                  <div class="one yellow"></div>
-                  <div class="two white"></div>
-                  <div class="three white"></div>
-                  <div class="four red"></div>
-                  <div class="five white"></div>
-                  <div class="six blue"></div>
+                    <div class="one yellow"></div>
+                    <div class="two white"></div>
+                    <div class="three white"></div>
+                    <div class="four red"></div>
+                    <div class="five white"></div>
+                    <div class="six blue"></div>
                 </div>
                 <p class="mondrian-title2">Composition No. II (1927)</p>
             </a>
-              
-            <ul class="painting-list">
-                <li><a href="mondrian-3.html">Composition C (1935)</a></li>
-                <li><a href="mondrian-4.html">Composition with Red, Blue and Yellow (1930)</a></li>
-                <li><a href="mondrian-5.html">Tableau I (1921)</a></li>
-                <li><a href="mondrian-6.html">Composition with Yellow, Red, Black, Blue and Gray (1920)</a></li>
-                <li><a href="mondrian-7.html">Composition No. XI; London (1940–42)</a></li>
-            </ul>
+
+            <a href="mondrian-3.html" class="thumbnail-link mini3" onclick="zoomAndGo(event, this)">
+                <div class="grid-container mondrian-thumbnail3">
+                    <div class="one red"></div>
+                    <div class="two white"></div>
+                    <div class="three white"></div>
+                    <div class="four white"></div>
+                    <div class="five yellow"></div>
+                    <div class="six white"></div>
+                    <div class="seven blue"></div>
+                    <div class="eight white"></div>
+                    <div class="nine white"></div>
+                </div>
+                <p class="mondrian-title3">Composition C (1935)</p>
+            </a>
+
+            <a href="mondrian-4.html" class="thumbnail-link mini4" onclick="zoomAndGo(event, this)">
+                <div class="grid-container mondrian-thumbnail4">
+                    <div class="one white"></div>
+                    <div class="two red"></div>
+                    <div class="three blue"></div>
+                    <div class="four white"></div>
+                    <div class="five white"></div>
+                    <div class="six yellow"></div>
+                </div>
+                <p class="mondrian-title4">Composition with Red, Blue and Yellow (1930)</p>
+            </a>
+
+            <a href="mondrian-5.html" class="thumbnail-link mini5" onclick="zoomAndGo(event, this)">
+                <div class="grid-container mondrian-thumbnail5">
+                    <div class="one red"></div>
+                    <div class="two offwhite"></div>
+                    <div class="three black"></div>
+                    <div class="four white"></div>
+                    <div class="five offwhite"></div>
+                    <div class="six offwhite"></div>
+                    <div class="seven offwhite"></div>
+                    <div class="eight blue"></div>
+                    <div class="nine white"></div>
+                    <div class="ten yellow"></div>
+                    <div class="eleven offwhite"></div>
+                    <div class="twelve offwhite"></div>
+                    <div class="thirteen black"></div>
+                </div>
+                <p class="mondrian-title5">Tableau I (1921)</p>
+            </a>
+            
+            <a href="mondrian-6.html" class="thumbnail-link mini6" onclick="zoomAndGo(event, this)">
+                <div class="grid-container mondrian-thumbnail6">
+                    <div class="one offwhite"></div>
+                    <div class="two white"></div>
+                    <div class="three yellow"></div>
+                    <div class="four white"></div>
+                    <div class="five black"></div>
+                    <div class="six offwhite"></div>
+                    <div class="seven red"></div>
+                    <div class="eight black"></div>
+                    <div class="nine white"></div>
+                    <div class="ten yellow"></div>
+                    <div class="eleven offwhite"></div>
+                    <div class="twelve blue"></div>
+                    <div class="thirteen offwhite"></div>
+                    <div class="fourteen offwhite"></div>
+                    <div class="fifteen offwhite"></div>
+                    <div class="sixteen white"></div>
+                    <div class="seventeen offwhite"></div>
+                    <div class="eighteen white"></div>
+    
+                    <div class="edge offwhite1"></div>
+                    <div class="edge offwhite2"></div>
+                    <div class="edge white1"></div>
+                    <div class="edge white2"></div>
+                    <div class="edge yellow1"></div>
+                    <div class="edge yellow2"></div>
+                    <div class="edge white3"></div>
+                    <div class="edge white4"></div>
+                    <div class="edge offwhite3"></div>
+                    <div class="edge red1"></div>
+                    <div class="edge red2"></div>
+                    <div class="edge offwhite4"></div>
+                    <div class="edge offwhite5"></div>
+                    <div class="edge white5"></div>
+                    <div class="edge white6"></div>
+                    <div class="edge offwhite6"></div>
+                    <div class="edge white7"></div>
+                    <div class="edge white8"></div>
+                </div>
+                <p class="mondrian-title6">Composition with Yellow, Red, Black, Blue and Gray (1920)</p>
+            </a>
+
+            <a href="mondrian-7.html" class="thumbnail-link mini7" onclick="zoomAndGo(event, this)">
+                <div class="grid-container mondrian-thumbnail7">
+                    <div class="one white"></div>
+                    <div class="two white"></div>
+                    <div class="three white"></div>
+                    <div class="four white"></div>
+                    <div class="five white"></div>
+                    <div class="six white thicker-line"></div>
+                    <div class="seven white thicker-line"></div>
+                    <div class="eight white thicker-line"></div>
+                    <div class="nine white thicker-line"></div>
+                    <div class="ten white thicker-line"></div>
+                    <div class="eleven white thicker-line"></div>
+                    <div class="twelve white thicker-line"></div>
+                    <div class="thirteen white thicker-line"></div>
+                    <div class="fourteen blue thicker-line"></div>
+                    <div class="fifteen blue thicker-line"></div>
+                    <div class="sixteen red"></div>
+                    <div class="seventeen blue"></div>
+                    <div class="eighteen blue"></div>
+                    <div class="nineteen red thicker-line"></div>
+                    <div class="twenty white thicker-line"></div>
+                    <div class="twentyone white thicker-line"></div>
+                    <div class="twentytwo white thicker-line"></div>
+                    <div class="twentythree white thicker-line"></div>
+                    <div class="twentyfour white thicker-line"></div>
+                    <div class="twentyfive white"></div>
+                    <div class="twentysix white"></div>
+                    <div class="twentyseven yellow"></div>
+                    <div class="twentyeight yellow"></div>
+                    <div class="twentynine white"></div>
+                    <div class="thirty white"></div>
+    
+                    <div class="thirtyone yellow"></div>
+                    <div class="thirtytwo white"></div>
+                    <div class="thirtythree white"></div>
+                    <div class="thirtyfour white"></div>
+                    <div class="thirtyfive white"></div>
+                </div>
+                <p class="mondrian-title7">Composition No. XI; London (1940–42)</p>
+            </a>
+
         </div>
 
         <footer class="footer">
@@ -92,7 +197,26 @@
                 <a href="https://github.com/anamariadragieva" target="_blank">Ana Maria Dragieva</a>
             </p>
         </footer>
-    </body>
 
+        <script>
+            // Reset zoom on back/refresh
+            window.addEventListener('pageshow', () => {
+                document.querySelectorAll('.grid-container.zoomed').forEach(el => {
+                    el.classList.remove('zoomed');
+                });
+            });
+    
+            // Zoom and navigate
+            function zoomAndGo(event, el) {
+              event.preventDefault(); // Stop browser from navigating immediately
+              const grid = el.querySelector('.grid-container');
+              grid.classList.add('zoomed');
+              setTimeout(() => {
+                window.location.href = el.getAttribute('href');
+              }, 600); // Match transition duration
+            }
+        </script>
+
+    </body>
 
 </html>
